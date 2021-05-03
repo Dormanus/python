@@ -30,6 +30,7 @@ while vie > 0:
 
                 temp = list(word)
                 temp[i] = lettre
+                temp[len(word)-1] = words[number][len(words[number])-1]
                 word = "".join(temp)
                 
                 if i == -1:
