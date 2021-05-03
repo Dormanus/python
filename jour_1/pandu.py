@@ -6,7 +6,7 @@ number = random.randint(0, 4)
 words = ["bonjour", "terre", "python", "lune", "palourd"]
 vie = 6
 word = ""
-print(words[number])
+
 for i in words[number]:
     if i == words[number][0]:
         word = i
@@ -15,6 +15,7 @@ for i in words[number]:
     else:
         word += "_"
     
+print(word)
 i = 0
 
 while vie > 0:
