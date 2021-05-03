@@ -55,7 +55,7 @@ if pointJ1 != pointJ2:
         print("J1 avec " + str(pointJ1))
     
     else:
-         print("J1 avec " + str(pointJ1))
+         print("J2 avec " + str(pointJ1))
 
 else:
     print("Egalité avec " + str(pointJ1))
