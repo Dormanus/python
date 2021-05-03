@@ -39,6 +39,7 @@ while vie > 0:
 
         else:
             vie -= 1
+            print("Il vous reste " + str(vie) + " tentatives")
         
         if word.find("_") == -1:
             break
