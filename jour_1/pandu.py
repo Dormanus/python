@@ -15,7 +15,6 @@ for i in words[number]:
     else:
         word += "_"
     
-print(word)
 i = 0
 
 while vie > 0:
