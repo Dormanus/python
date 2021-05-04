@@ -28,6 +28,10 @@ class Block:
 class Blockchain:
     def __init__(self, block):
         self.__blocks = [compute_hash(block)]
+        
+        fichier = open("data.txt", "a")
+        fichier.write(self.__blocks)
+        fichier.close()
     
 
     def addBlock(self, block):
