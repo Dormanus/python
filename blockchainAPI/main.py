@@ -152,13 +152,11 @@ def getFilms():
 def get_film(id):
     if(not connection.getA()):
         return home()
-    print(index)
     co = sqlite3.connect('tables/tables.db')
     co.row_factory = dict_factory
     cur = co.cursor()
     film = cur.execute('select * from films where id=' + id).fetchone()
     co.close()
-    print(film)
     return render_template('film.html', film = film)
 
 
