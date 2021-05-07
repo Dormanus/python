@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <br/><h1>{% block title %} Ajouter un film {% endblock %}</h1><br>
+    <form action="http://127.0.0.1:5000/films/add_film" method="post" class="form-addFilm">
+        <div class="form-addFilm">
+          <label for="film">Nom du film: </label><br>
+          <input type="text" name="film" id="film" required>
+        </div>
+        <div class="form-addFilm">
+          <label for="producer">Réalisateur: </label><br>
+          <input type="text" name="producer" id="producer" required>
+        </div>
+        <div class="form-addFilm">
+            <label for="release_year">Année de sortie: </label><br>
+            <input type="text" name="release_year" id="release_year" required>
+          </div><br>
+        <div class="form-addFilm">
+          <input type="submit" value="Enregistrer!">
+        </div>
+      </form>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <br/><h1>{% block title %} Film {% endblock %}</h1>
+
+        <h2>{{ film['film'] }}</h2>
+        <div><div class="film">ID : </div ><div class="valueFilm">{{ film['id'] }}</div></div>
+        <div><div class="film">previous_hash : </div ><div class="valueFilm">{{ film['previous_hash'] }}</div></div>
+        <div><div class="film">timestamp : </div ><div class="valueFilm">{{ film['timestamp'] }}</div></div>
+        <div><div class="film">producer : </div ><div class="valueFilm">{{ film['producer'] }}</div></div>
+        <div><div class="film">release_year : </div ><div class="valueFilm">{{ film['release_year'] }}</div></div>
+        <div><div class="film">hash : </div ><div class="valueFilm">{{ film['hash'] }}</div></div>
+        <div><div class="film">nonce : </div ><div class="valueFilm">{{ film['nonce'] }}</div></div>
+ 
+    <hr>
+{% endblock %}

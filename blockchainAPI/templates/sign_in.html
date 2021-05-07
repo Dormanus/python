@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <form action="http://127.0.0.1:5000/sign_in" method="post" class="form-connection">
+      <br/><h1>Se connecter</h1><br/>
+      {% if wrongCredentials %}
+        <br/><div class="error">Les identifiants sont erronés</div><br/>
+      {% endif %}
+      <div class="form-connection">
+        <label for="user">Nom d'utilisateur</label><br>
+        <input type="text" name="user" id="user" required placeholder="Nom d'utilisateur">
+      </div>
+      <div class="form-connection">
+        <label for="password">Mot de passe</label><br>
+        <input type="password" name="password" id="password" required placeholder="Mot de passe">
+      </div><br>
+      <div class="form-connection">
+        <input type="submit" value="Se connecter">
+      </div>
+    </form>
+    <a href='http://127.0.0.1:5000/sign_up'>S'inscrire</a>
+{% endblock %}

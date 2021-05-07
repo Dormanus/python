@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <br/><h1>{% block title %} Recherche {% endblock %}</h1><br/>
+    <form action="http://127.0.0.1:5000/films/search" method="post" class="form-searchFilm">
+        <div class="form-searchFilm">
+            <label for="film">Entrer le nom du film: </label><br>
+            <input type="text" name="film" id="film" >
+        </div>
+        <div class="form-searchFilm">
+            <label for="producer">Entrer le nom du réalisateur: </label><br>
+            <input type="text" name="producer" id="producer" >
+        </div>
+        <div class="form-searchFilm">
+            <label for="release_year">Entrer l'année de sortie': </label><br>
+            <input type="text" name="release_year" id="release_year" >
+            </div><br>
+        <div class="form-searchFilm">
+            Télécharger le resultat dans  <input type="text" name="filename" id="filename" > <br><p>(Remplir uniquement si vous voulez télécharger le résultat)</p>
+            {% if notDownload %}
+                <div class="error">Le fichier n'a pas pu être créé</div><br/>
+            {% endif %}
+            {% if fileCreated %}
+                <div class="success">Le fichier a été créé</div><br/>
+            {% endif %}
+            <input type="submit" value="Rechercher!"><br>
+        </div>
+    </form>
+    <form>
+        
+    </form>
+
+    <br/>
+    {% if found %}
+        {% for f in films %}
+            <a href="http://127.0.0.1:5000/film/{{f['id'] }}">
+                <h2>{{ f['film'] }}</h2>
+            </a>
+            <hr>
+        {% endfor %}
+    {% endif %}
+    
+{% endblock %}
